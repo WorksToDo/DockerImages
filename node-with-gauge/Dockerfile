@@ -15,4 +15,9 @@ RUN curl -SsL https://downloads.gauge.org/stable | sh
 RUN gauge install java && \
     gauge install screenshot
 
+RUN curl -sL https://deb.nodesource.com/setup_16.x | sh
+RUN apt install nodejs
+
+RUN apt install -y git
+
 ENV PATH=$HOME/.gauge:$PATH
